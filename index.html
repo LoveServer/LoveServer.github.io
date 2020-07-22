@@ -1,203 +1,268 @@
+<！DOCTYPE html >
+< html  lang =“ zh-CN ” >
+
+< 头>
+    < meta  charset =“ UTF-8 ” />
+< title > Linkinter-你身边的高效生活参考书</ title >
+< meta  name =“ description ” content =“ 你身边的高效生活参考书 ” >
+< meta  name =“ viewport ” content =“ width = device-width，initial-scale = 1，maximum-scale = 1，user-scalable = no ” >
+
+< 链路 类型 = ' 文本/ CSS ' 相对 =' 样式 ' HREF =' https://linkinter.github.io/styles/main.css ' 媒体 =' 屏幕 '/>
+< 链接 类型 =“ text / css ” rel =“ 样式表 ” href =“ https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css ” >
+< 链接 类型 =“ text / css ” rel =“ 样式表 ” href =“ https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css ” >
+
+< 脚本 类型 =“ text / javascript ” src =' https://linkinter.github.io/media/scripts/jquery.js ' > </ 脚本>
+< 脚本 类型 =“ text / javascript ” src =“ https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js ” > </ 脚本>
+
+< 脚本>
+    hljs 。initHighlightingOnLoad （）;
+</ 脚本>
+</ head >
+
+< 身体>
+
+    < div  class =“ layout theme-dark ” >
+
+        < div  class =“ layout-header ” >
+
+	< div  class =“ layout-header-main ” >
+		< div  class =“ container ” >
+			< div  class =“ row justify-content-lg-center ” >
+				< div  class =“ col-12 col-lg-9 ” >
+
+					< div  class =“ navbar ” >
+
+						< div  class =“ logo ” >
+							< 一个 HREF = “ https://linkinter.github.io ” >
+								< img  class =“ logo ”
+									src =“ https://linkinter.github.io/media/images/site_avatar.png?v=1593408584412 ”
+									alt =“” >
+							</ a >
+						</ div >
+
+						< div  class =“ 菜单d-md-inline-block d-none ” >
+							< ul  class =“ layout-navigation-list ” >
+								
+								< li  class =“ layout-navigation-item ” > < 一个 标题 =“ 首页 ”
+										href =“ / ” >首页</ a >
+								</ li >
+								
+								< li  class =“ layout-navigation-item ” > < 一个 标题 =“ 载入 ”
+										href =“ / archives ” >添加</ a >
+								</ li >
+								
+								< li  class =“ layout-navigation-item ” > < 一个 标题 =“ 标签 ”
+										href =“ / tags ” >标签</ a >
+								</ li >
+								
+								< li  class =“ layout-navigation-item ” > < 一个 标题 =“ 关于 ”
+										href =“ / post / about ” >关于</ a >
+								</ li >
+								
+							</ ul >
+						</ div >
+
+						< div  class =“ item d-md-inline-block d-none ” >
+							< div  class =“ search-icon ” >
+								< i  class =“ fa fa-search ” aria-hidden =“ true ” > </ i >
+							</ div >
+						</ div >
 
 
-<!DOCTYPE html>
-<html lang="en" ver="1594889303417">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <meta name="robots" content="nofollow,noindex,noarchive">
-  <meta name="hotcss" content="max-width=0">
-  <title></title>
-  <script>(function() { console.log('');console.info("//-- VER. 2020-7-16 16:48:23 --//");console.log(''); })()</script>
-  <script>
-    (function (window, document) {
 
-      'use strict';
+						< div  class =“ d-md-inline-block d-none ” >
+							< div  class =“ search-lightbox ” >
+								< div  class =“ search-body ” >
 
-      //给hotcss开辟个命名空间，别问我为什么，我要给你准备你会用到的方法，免得用到的时候还要自己写。
-      var hotcss = {};
+									< form  id =“ gridea-search-form ” data-update =“ 1593408584412 ” action =“ / search / ” class =“ search-form ” >
+										< 输入 类型 = “ 文本 ” 名称 =“ q ” ID =“ 小号 ” 的值 =“” 类 = “ 搜索字段 ” 占位符 =“ 请输入搜索关键词 ” 咏叹调标签 =“ 请输入搜索关键词 ” 需要 = “” >
+										< 按钮 类型 =“ 提交 ” 类 =“ 提交 ” aria-label =“ 提交 ” >
+											< i  class =“ fa fa-search ” aria-hidden =“ true ” > </ i >
+										</ 按钮>
+									</ 表单>
 
-      (function () {
-        //根据devicePixelRatio自定计算scale
-        //可以有效解决移动端1px这个世纪难题。
-        var viewportEl = document.querySelector('meta[name="viewport"]'),
-          hotcssEl = document.querySelector('meta[name="hotcss"]'),
-          dpr = window.devicePixelRatio || 1,
-          maxWidth = 540,
-          designWidth = 0;
+								</ div >
+							</ div >
+						</ div >
 
-        dpr = dpr >= 3 ? 3 : (dpr >= 2 ? 2 : 1);
+						< div  class =“ nav d-md-none d-inline-block ” >
+							< div  class =“ trigger ” >
+								< i  class =“ fa fa-bars layout-btn-toggle ” aria-hidden =“ true ” > </ i >
+							</ div >
+						</ div >
 
-        //允许通过自定义name为hotcss的meta头，通过initial-dpr来强制定义页面缩放
-        if (hotcssEl) {
-          var hotcssCon = hotcssEl.getAttribute('content');
-          if (hotcssCon) {
-            var initialDprMatch = hotcssCon.match(/initial\-dpr=([\d\.]+)/);
-            if (initialDprMatch) {
-              dpr = parseFloat(initialDprMatch[1]);
-            }
-            var maxWidthMatch = hotcssCon.match(/max\-width=([\d\.]+)/);
-            if (maxWidthMatch) {
-              maxWidth = parseFloat(maxWidthMatch[1]);
-            }
-            var designWidthMatch = hotcssCon.match(/design\-width=([\d\.]+)/);
-            if (designWidthMatch) {
-              designWidth = parseFloat(designWidthMatch[1]);
+					</ div >
+
+				</ div >
+			</ div >
+
+
+
+
+		</ div >
+	</ div >
+
+</ div >
+        
+        < div  class =“ layout-collapse d-md-none ” >
+	< div  class =“ layout-collapse-main ” >
+		< ul  class =“ layout-collapse-list ” >
+			
+			< 锂 类 = “ 布局塌项 ” > < 一个 标题 =“ 首页 ” HREF =“ / ” >首页</ 一> </ 李>
+			
+			< 锂 类 = “ 布局塌项 ” > < 一个 标题 =“ 归档 ” HREF =“ /档案 ” >归档</ 一> </ 李>
+			
+			< 锂 类 = “ 布局塌项 ” > < 一个 标题 =“ 标签 ” HREF =“ /标记 ” >标签</ 一> </ 李>
+			
+			< 锂 类 = “ 布局塌项 ” > < 一个 标题 =“ 关于 ” HREF =“ /后/约 ” >关于</ 一> </ 李>
+			
+
+		</ ul >
+	</ div >
+</ div >
+
+        < div  class =“ layout-banner ” >
+  < div  class =“ layout-banner-main ” >
+    < div  class =“ container ” >
+      < div  class =“ row justify-content-lg-center ” >
+        < div  class =“ col-12 col-lg-9 ” >
+          < div  class =“ banner ” >
+            < div  class =“ 横幅列表行 ” >
+              < div  class =“ item col-12 col-sm-9 ” >
+                
+                
+                < div  class =“ banner-card main ” >
+                  < 一个 类 =“ card-content ” href =“ https://linkinter.github.io/post/linkinter-new/ ” style =“ 背景图像：url（'https://linkinter.github.io/post -images / linkinter-new.png'） “ >
+                    < div  class =“ mask ” > </ div >
+                    < div  class =“ title ” >
+                      < h3  class =“ card-title ” >【Linkinter】全新品牌，全新起点</ h3 >
+                    </ div >
+                  </ a >
+                </ div >
+                
+              </ div >
+              < div  class =“ col-12 col-sm-3 ” >
+                < div  class =“ row ” >
+                  
+                  
+                  
+                </ div >
+              </ div >
+            </ div >
+          </ div >
+        </ div >
+      </ div >
+    </ div >
+  </ div >
+</ div >
+
+        < div  class =“ layout-content ” >
+  < div  class =“ layout-content-main ” >
+    < div  class =“ container ” >
+      < div  class =“ row justify-content-lg-center ” >
+        < div  class =“ col-12 col-lg-9 ” >
+          < div  class =“ card-list ” >
+            
+            
+            
+            
+            
+          </ div >
+
+          
+
+        </ div >
+      </ div >
+    </ div >
+  </ div >
+</ div >
+
+
+< 脚本 类型 =“ text / javascript ” >
+  //点击加载更多
+  jQuery （文档）。准备好了（函数 （$ ） {
+    //点击下一页的链接（即那个a标签）
+    $ （'.btn-paginator' ）。点击（功能 （） {
+      $ this  =  $ （this ）;
+      $ this 。addClass （'加载' ）。文字（'正在加载' ）;  //给a标签加载一个loading的类属性，添加添加加载效果
+      var  href  =  $ this 。attr （'href' ）;  //获取下一页的链接地址
+      if  （href！= undefined ） {  //如果地址存在
+        $ 。ajax （{  //发起ajax请求
+          网址：href ，
+          //请求的地址就是下一页的链接
+          类型：“获取” ，
+          //请求类型是get
+          错误：函数 （请求） {
+            //如果发生错误怎么处理
+          } ，
+          success：function  （data ） {  //请求成功
+            $ this 。removeClass （'加载' ）。文字（'加载更多' ）;  //可移除的加载属性
+            var  $ res  =  $ （数据）。查找（'.card' ）;  //从数据中挑出文章数据，请根据实际情况更改
+            $ （'.card-list' ）。追加（$水库。淡入（
+              500 ））;  //将数据加载加进posts-loop的标签中。
+            var  newhref  =  $ （数据）。查找（'.btn-paginator' ）。attr （'href' ）;  //寻找新的下一页链接
+            如果 （newhref！= undefined ） {
+              $ （'.btn-paginator' ）。attr （'href' ， newhref ）;
+            }  其他 {
+              $ （'.btn-paginator' ）。删除（）;  //如果没有下一页了，隐藏
             }
           }
-        }
-
-        document.documentElement.setAttribute('data-dpr', dpr);
-        hotcss.dpr = dpr;
-
-        document.documentElement.setAttribute('max-width', maxWidth);
-        hotcss.maxWidth = maxWidth;
-
-        if (designWidth) {
-          document.documentElement.setAttribute('design-width', designWidth);
-          hotcss.designWidth = designWidth;
-        }
-
-        var scale = 1 / dpr,
-          content = 'width=device-width, initial-scale=' + scale +
-          ', minimum-scale=' + scale + ', maximum-scale=' +
-          scale + ', user-scalable=no';
-
-        if (viewportEl) {
-          viewportEl.setAttribute('content', content);
-        } else {
-          viewportEl = document.createElement('meta');
-          viewportEl.setAttribute('name', 'viewport');
-          viewportEl.setAttribute('content', content);
-          document.head.appendChild(viewportEl);
-        }
-
-      })();
-
-      hotcss.px2rem = function (px, designWidth) {
-        //预判你将会在JS中用到尺寸，特提供一个方法助你在JS中将px转为rem。就是这么贴心。
-        if (!designWidth) {
-          //如果你在JS中大量用到此方法，建议直接定义 hotcss.designWidth 来定义设计图尺寸;
-          //否则可以在第二个参数告诉我你的设计图是多大。
-          designWidth = parseInt(hotcss.designWidth, 10);
-        }
-
-        return parseInt(px, 10) * 320 / designWidth / 20;
+        } ）;
       }
+      返回 false ;
+    } ）;
+  } ）;
+</ 脚本>
 
-      hotcss.rem2px = function (rem, designWidth) {
-        //新增一个rem2px的方法。用法和px2rem一致。
-        if (!designWidth) {
-          designWidth = parseInt(hotcss.designWidth, 10);
-        }
-        //rem可能为小数，这里不再做处理了
-        return rem * 20 * designWidth / 320;
-      }
+        	< div  class =“ layout-footer ” >
 
-      hotcss.mresize = function () {
-        //对，这个就是核心方法了，给HTML设置font-size。
-        var innerWidth = document
-          .documentElement
-          .getBoundingClientRect().width || window.innerWidth;
+		< div  class =“ container ” >
+			< div  class =“ row justify-content-lg-center ” >
+				< div  class =“ col-12 col-lg-9 ” >
+					< div  class =“ footer ” >
+						< div  class =“ row ” >
+							< div  class =“ col-12 col-md-9 ” >
+								< div  class =“ footer-copy ” >
+									
+									版权所有©2020 Linkinter。版权所有。Linkinter版权所有
+									< div  class =“ footer-icp d-none d-sm-inline-block ” >
+										< span  class =“ px-2 ” > ⋅ </ span >
+										
+									</ div >
+								</ div >
+							</ div >
+							< div  class =“ col-sm-3 d-none d-md-block ” >
+								< div  class =“ footer-links ” >
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+								</ div >
+							</ div >
+						</ div >
+					</ div >
+				</ div >
+			</ div >
+		</ div >
 
-        if (hotcss.maxWidth && (innerWidth / hotcss.dpr > hotcss.maxWidth)) {
-          innerWidth = hotcss.maxWidth * hotcss.dpr;
-        }
+	</ div >
 
-        if (!innerWidth) {
-          return false;
-        }
+	< 脚本 类型 =“ text / javascript ” src =' https://linkinter.github.io/media/scripts/main.js ' > </ 脚本>
+	
+    </ div >
+</ body >
 
-        document.documentElement.style.fontSize = (innerWidth * 20 / 320) + 'px';
-
-        hotcss.callback && hotcss.callback();
-
-      };
-
-      hotcss.mresize();
-      //直接调用一次
-
-      window.addEventListener('resize', function () {
-        clearTimeout(hotcss.tid);
-        hotcss.tid = setTimeout(hotcss.mresize, 33);
-      }, false);
-      //绑定resize的时候调用
-
-      window.addEventListener('load', hotcss.mresize, false);
-      //防止不明原因的bug。load之后再调用一次。
-
-
-      setTimeout(function () {
-        hotcss.mresize();
-        //防止某些机型怪异现象，异步再调用一次
-      }, 333)
-
-      window.hotcss = hotcss;
-      //命名空间暴露给你，控制权交给你，想怎么调怎么调。
-
-
-    })(window, document);
-
-    var $SRC_IMAGE = Image;
-
-    Image = function() {
-      var img = new $SRC_IMAGE()
-
-      var hooks = [];
-
-      img.onload = function() {
-        hooks.forEach(function(cb) {
-          cb();
-        });
-      };
-
-      window.$ADD_IMAGE_ONLOAD_HOOK = function(cb) {
-        hooks.push(cb);
-      };
-
-      return img;
-    }
-  </script>
-<link href="/assets/css/styles.b80dd.css" rel="stylesheet"><link href="/assets/css/main.28521.css" rel="stylesheet"></head>
-<body>
-  <div id="app"></div>
-  <script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
-  <script charset="utf-8" src="https://3gimg.qq.com/lightmap/components/geolocation/geolocation.min.js"></script>
-  <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=4OBZ-5ZYWW-QP4RP-RLNNW-NTBNE-USBLB"></script>
-  <script src="https://static.clewm.net/static/js/lib/fastclick.min_e800774.js"></script>
-  <!-- google analysis -->
-  <script src="//static.clewm.net/public/cli_analytics.js?v=1594889303417" defer></script>
-  <script>
-  if ('addEventListener' in document) {
-    document.addEventListener('DOMContentLoaded', function() {
-      FastClick.attach(document.body);
-    }, false);
-  }
-  </script>
-  <!-- baidu analysis -->
-  <script>
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?fe4f5e280909f693f7a8cf31a2d9fc30";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-  </script>
-  <script src="/assets/js/esnext/main/styles.b80dd.js" type="module"></script>
-  <script src="/assets/js/esnext/main/vendors.main.21926.js" type="module"></script>
-  <script src="/assets/js/esnext/main/main.28521.js" type="module"></script>
-
-<script>
-  !function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()},!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();
-</script>
-
-  <script type="text/javascript" src="/assets/js/es5/main/styles.26980.js" nomodule></script>
-  <script type="text/javascript" src="/assets/js/es5/main/vendors.main.68e23.js" nomodule></script>
-  <script type="text/javascript" src="/assets/js/es5/main/main.d45cd.js" nomodule></script>
-</body>
-</html>
+</ html >
